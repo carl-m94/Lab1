@@ -1,0 +1,60 @@
+.container {
+  height: 420px;
+  width: 320px;
+  perspective: 500px;
+  position: relative;
+  top: 20px;
+}
+.card {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+}
+
+.card:hover{
+  box-shadow:
+  1px 1px #000,
+  10px 10px #c41717,  
+  20px 20px #00ff15;
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+ 
+}
+
+.card:active {
+  transform: rotateX(180deg); 
+  /*
+  
+  transform: rotate(90deg); 
+  transform-origin: bottom left;
+  
+  /*
+  transform: skewx(10deg) translatex(150px);
+  */
+}
+
+.card .side {
+  
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  box-shadow: inset 0 0 0 20px #53a7ea;
+}
+
+.card .back {
+  color: white;
+  transform: rotateX(180deg);
+  /*
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  */
+background: rgb(2,0,36);
+  /*
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(94,29,33,1) 54%, rgba(0,212,255,1) 100%);  
+  */
+  /* https://cssgradient.io/ */
+}
+
